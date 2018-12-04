@@ -1,0 +1,1 @@
+{"virtualbox":{"/home/vagrant/ansible-playbook":{"owner":"vagrant","group":"vagrant","create":true,"mount_options":["fmode=700"],"guestpath":"/home/vagrant/ansible-playbook","hostpath":"/Volumes/Software/Private/Docker-seminar/ansible-playbook","disabled":false,"__vagrantfile":true}}}

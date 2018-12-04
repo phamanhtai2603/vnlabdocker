@@ -1,0 +1,13 @@
+[local_ci]
+192.168.33.90
+
+[local_app]
+192.168.33.91
+
+[all:children]
+local_ci
+local_app
+
+[local:children]
+local_ci
+local_app

@@ -1,0 +1,14 @@
+- hosts:
+    - local_ci
+  remote_user: vagrant
+  connection: local
+  roles:
+    - app.common
+    - geerlingguy.git
+    - geerlingguy.docker
+- hosts:
+    - local_app
+  remote_user: vagrant
+  roles:
+    - app.common
+    - geerlingguy.docker
