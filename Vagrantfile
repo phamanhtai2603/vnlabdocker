@@ -9,7 +9,7 @@ Vagrant.configure(2) do |config|
 
   server_configs = [
     {"hostname" => "ci",             "ip" => "192.168.33.90", "port" => 2290, "memory_size" => "1024", "execute_script" => true},
-    {"hostname" => "consumer", "ip" => "192.168.33.91", "port" => 2291, "memory_size" => "512", "execute_script" => false}
+    {"hostname" => "consumer", "ip" => "192.168.33.91", "port" => 2291, "memory_size" => "512", "execute_script" => true}
   ]
 
   $script = "
