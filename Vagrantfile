@@ -38,6 +38,7 @@ sudo -u vagrant ansible-galaxy --ignore-errors install -p roles -r requirements.
         v.customize ["setextradata", :id, "VBoxInternal/Devices/VMMDev/0/Config/GetHostTimeDisabled", 0]
       end
       server.vm.synced_folder ".", "/home/vagrant/ansible-playbook", owner: "vagrant", group: "vagrant", :create => true, :mount_options => ["fmode=700"]
+      server.vm.synced_folder "./yii2-project", "/usr/share/code/code", owner: "root", group: "root", :create => true, :mount_options => ["fmode=700"]
       if server_config['execute_script'] then
         server.vm.provision :shell, inline: $script
       end
