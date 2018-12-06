@@ -16,5 +16,5 @@ cd ansible-playbook
 ansible-playbook -i hosts.local provision.yml --become
 
 # install mysql by docker-compser
-ansible-playbook -i hosts.local install_mysql.yml--become
+ansible-playbook -i hosts.local install_mysql.yml --become
 ```
