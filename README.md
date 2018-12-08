@@ -8,6 +8,10 @@ git clone https://github.com/phongnx1/ansible-docker-training.git
 cd ansible-playbook
 git clone https://github.com/phongnx1/yii2-project.git
 
+# create log dir
+cd yii2-project
+mkdir log
+
 # start VMs
 vagrant up ci consumer
 
@@ -21,6 +25,7 @@ ansible-playbook -i hosts.local install_mysql.yml --become
 
 # install nginx-php-fpm by docker-compser
 ansible-playbook -i hosts.local deploy_app.yml --become
+exit
 
 # add local hosts file
 192.168.33.91   frontend.yii2
