@@ -80,5 +80,4 @@
     chdir: "{{ user_home }}/app"
   with_items:
     - "docker-compose down"
-    # - "service docker restart"
     - "docker-compose up -d"
