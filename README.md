@@ -27,6 +27,10 @@ ansible-playbook -i hosts.local install_mysql.yml --become
 ansible-playbook -i hosts.local deploy_app.yml --become
 exit
 
+# php init
+vagrant ssh consumer
+sudo docker exec -it nginx "cd /code && php init"
+
 # add local hosts file
 192.168.33.91   frontend.yii2
 192.168.33.91   backend.yii2
