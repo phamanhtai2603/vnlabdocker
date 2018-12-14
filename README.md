@@ -29,7 +29,9 @@ exit
 
 # php init
 vagrant ssh consumer
-sudo docker exec -it nginx "cd /code && php init"
+sudo docker exec -it php-fpm bash
+cd /code/ && php init
+
 
 # add local hosts file
 192.168.33.91   frontend.yii2
@@ -37,4 +39,11 @@ sudo docker exec -it nginx "cd /code && php init"
 
 #Confirm start web: Browser
 http://frontend.yii2
+
+# CASE vendor error
+vagrant ssh consumer
+sudo docker exec -it php-fpm bash
+cd /code/
+rm -r vendor/
+composer install
 ```
